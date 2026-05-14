@@ -60,7 +60,7 @@ export default function RegisterPage() {
       {/* CONTAINER PRINCIPAL */}
       <div className="relative w-full max-w-sm z-10 mt-8 mb-12">
         
-        {/* LOGO - PADRONIZADO IGUAL AO LOGIN ACIMA */}
+        {/* LOGO */}
         <header className="absolute -top-10 left-1/2 -translate-x-1/2 z-20">
           <div className="bg-white p-2.5 rounded-full shadow-xl border-[3px] border-slate-100 flex items-center justify-center">
             <Image 
@@ -74,7 +74,7 @@ export default function RegisterPage() {
           </div>
         </header>
 
-        {/* CARD BRANCO - p-6 pt-14 pb-6 */}
+        {/* CARD BRANCO */}
         <div className="bg-white rounded-2xl shadow-2xl p-6 pt-14 pb-6 border border-slate-100">
           <div className="text-center mb-6">
             <h2 className="text-lg font-bold text-slate-700 tracking-tight">Nova Conta</h2>
@@ -119,7 +119,8 @@ export default function RegisterPage() {
                 className="absolute inset-y-0 right-3 flex items-center text-slate-400 hover:text-blue-600 transition-all"
                 tabIndex="-1" 
               >
-                {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+                {/* Lógica Corrigida: Se a senha está visível (true), mostra Eye. Se oculta (false), mostra EyeOff */}
+                {showPassword ? <Eye size={16} /> : <EyeOff size={16} />}
               </button>
             </Input>
 

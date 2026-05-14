@@ -117,7 +117,8 @@ export default function LoginPage() {
                 className="absolute inset-y-0 right-3 flex items-center text-slate-400 hover:text-blue-600 transition-all"
                 tabIndex="-1" 
               >
-                {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+                {/* Lógica Invertida Corrigida: Se mostrar, exibe ícone de fechar. Se oculto, exibe ícone de abrir. */}
+                {showPassword ? <Eye size={16} /> : <EyeOff size={16} />}
               </button>
             </Input>
 
