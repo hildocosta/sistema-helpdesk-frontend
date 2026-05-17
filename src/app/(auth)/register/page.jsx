@@ -8,9 +8,9 @@ import { Eye, EyeOff } from "lucide-react";
 import { z } from "zod";
 import { toast } from "sonner";
 
-import Input from "../../components/Inputs/Inputs";
-import ActionButton from "../../components/ActionButtons/ActionButtons";
-import Footer from "../../components/Footers/Footers";
+import Input from "../../../components/Input/Input";
+import ActionButton from "../../../components/ActionButton/ActionButton";
+import Footer from "../../../components/Footer/Footer";
 
 const registerSchema = z.object({
   name: z.string().min(3, "O NOME DEVE TER PELO MENOS 3 LETRAS.").max(50, "NOME MUITO LONGO."),
@@ -119,7 +119,7 @@ export default function RegisterPage() {
                 className="absolute inset-y-0 right-3 flex items-center text-slate-400 hover:text-blue-600 transition-all"
                 tabIndex="-1" 
               >
-                {/* Lógica Corrigida: Se a senha está visível (true), mostra Eye. Se oculta (false), mostra EyeOff */}
+                
                 {showPassword ? <Eye size={16} /> : <EyeOff size={16} />}
               </button>
             </Input>
@@ -145,7 +145,8 @@ export default function RegisterPage() {
           </form>
         </div>
       </div>
-
+      
+      {/* Footer fixo na base da tela */}
       <div className="absolute bottom-4 w-full z-10">
         <Footer />
       </div>

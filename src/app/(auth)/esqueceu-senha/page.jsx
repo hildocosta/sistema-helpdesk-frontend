@@ -6,9 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { MailCheck } from "lucide-react";
 
-import Input from "../../components/Inputs/Inputs";
-import ActionButton from "../../components/ActionButtons/ActionButtons";
-import Footer from "../../components/Footers/Footers";
+import Input from "../../../components/Input/Input";
+import ActionButton from "../../../components/ActionButton/ActionButton";
+import Footer from "../../../components/Footer/Footer";
 
 export default function ForgotPasswordPage() {
   const [email, setEmail] = useState("");
@@ -37,13 +37,13 @@ export default function ForgotPasswordPage() {
   return (
     <main className="min-h-screen w-full bg-slate-900 flex flex-col items-center justify-center font-sans relative overflow-hidden p-4">
       
-      {/* Efeito de fundo azulado - IDÊNTICO AO LOGIN */}
+      {/* Efeito de fundo azulado */}
       <div className="absolute inset-0 z-0 opacity-20 bg-gradient-to-br from-blue-600 to-black pointer-events-none" />
 
       {/* Container Principal Centralizado - Uniforme com o Login e Register */}
       <div className="relative w-full max-w-sm z-10 mt-8 mb-12">
         
-        {/* LOGO DO 17º BPM - Padronizado (-top-10 e width 60) */}
+        {/* LOGO DO 17º BPM */}
         <header className="absolute -top-10 left-1/2 -translate-x-1/2 z-20">
           <div className="bg-white p-2.5 rounded-full shadow-xl border-[3px] border-slate-100 flex items-center justify-center">
             <Image 
@@ -57,7 +57,7 @@ export default function ForgotPasswordPage() {
           </div>
         </header>
 
-        {/* CARD BRANCO - p-6 pt-14 pb-6 (Exatamente igual ao Login) */}
+        {/* CARD BRANCO */}
         <div className="bg-white rounded-2xl shadow-2xl p-6 pt-14 pb-6 border border-slate-100">
           {!isSubmitted ? (
             /* ESTADO 1: FORMULÁRIO DE SOLICITAÇÃO */
@@ -155,7 +155,7 @@ export default function ForgotPasswordPage() {
         </div>
       </div>
 
-      {/* Footer fixo na base da tela - IDÊNTICO AO LOGIN */}
+      {/* Footer fixo na base da tela */}
       <div className="absolute bottom-4 w-full z-10">
         <Footer />
       </div>

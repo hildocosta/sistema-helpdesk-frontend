@@ -8,9 +8,9 @@ import { signIn } from "next-auth/react";
 import { Eye, EyeOff } from "lucide-react";
 import { z } from "zod";
 
-import Input from "../../components/Inputs/Inputs";
-import ActionButton from "../../components/ActionButtons/ActionButtons";
-import Footer from "../../components/Footers/Footers";
+import Input from "../../../components/Input/Input";
+import ActionButton from "../../../components/ActionButton/ActionButton";
+import Footer from "../../../components/Footer/Footer";
 
 const loginSchema = z.object({
   email: z.string().email("E-MAIL INVÁLIDO.").min(5, "E-MAIL MUITO CURTO."),
@@ -63,10 +63,10 @@ export default function LoginPage() {
       {/* Efeito de fundo azulado */}
       <div className="absolute inset-0 z-0 opacity-20 bg-gradient-to-br from-blue-600 to-black pointer-events-none" />
 
-      {/* Container Principal Centralizado - Uniforme com o Register */}
+      {/* Container Principal Centralizado */}
       <div className="relative w-full max-w-sm z-10 mt-8 mb-12">
         
-        {/* LOGO DO 17º BPM - Padronizado (-top-10 e width 60) */}
+        {/* LOGO DO 17º BPM */}
         <header className="absolute -top-10 left-1/2 -translate-x-1/2 z-20">
           <div className="bg-white p-2.5 rounded-full shadow-xl border-[3px] border-slate-100 flex items-center justify-center">
             <Image 
@@ -80,7 +80,7 @@ export default function LoginPage() {
           </div>
         </header>
 
-        {/* CARD BRANCO - p-6 pt-14 pb-6 */}
+        {/* CARD BRANCO */}
         <div className="bg-white rounded-2xl shadow-2xl p-6 pt-14 pb-6 border border-slate-100">
           <div className="text-center mb-6">
             <h2 className="text-lg font-bold text-slate-700 tracking-tight">Acessar Sistema</h2>
@@ -117,15 +117,15 @@ export default function LoginPage() {
                 className="absolute inset-y-0 right-3 flex items-center text-slate-400 hover:text-blue-600 transition-all"
                 tabIndex="-1" 
               >
-                {/* Lógica Invertida Corrigida: Se mostrar, exibe ícone de fechar. Se oculto, exibe ícone de abrir. */}
+                
                 {showPassword ? <Eye size={16} /> : <EyeOff size={16} />}
               </button>
             </Input>
 
-            {/* Link Esqueceu Senha */}
+            
             <div className="flex justify-end pr-1 mb-4">
               <Link 
-                href="/esqueceu_senha" 
+                href="/esqueceu-senha" 
                 className="text-[11px] text-blue-500 font-bold hover:underline transition-all"
               >
                 Esqueceu sua senha?
